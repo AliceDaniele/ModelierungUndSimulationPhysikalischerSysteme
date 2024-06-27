@@ -14,7 +14,7 @@ Für Modellrechnungen können folgende Parameterwerte verwendet werden:
 * $D^\ast = 0.1$ N m,
 * $DD^\ast = 0.01$ N m,
 * $b^\ast = 0.2$ Nm s,
-* $\hat{\alpha}_E = 50$.
+* $\hat{\alpha}_E = 5°$.
 
 ## Aufgabenstellung
 
@@ -71,15 +71,15 @@ Die Lage des Startpunktes soll im Diagramm ersichtlich sein.
 | $\alpha$ | Auslenkungswinkel Erreger | rad |
 | $\hat{M}_e$ | Externeds Drehmoment | N m |
 | $\varphi_{1,2}(t)$ | Rotorauslenkungswinkel | rad |
-| $b^\ast$ | Dämpfung (Wirbelstrombremse) | |
-| $D^\ast$ | (Torsions)federkonstante | N m |
-| $DD^\ast$ | | |
+| $b^\ast$ | Dämpfung (Wirbelstrombremse) | N m s|
+| $D^\ast$ | Torsionsfederkonstante der beiden Rückstellfedern | N m |
+| $DD^\ast$ | Torsionsfederkonstante der Kopplungsfeder | N m|
 | $J$ | Trägheitsmoment | kg m²|
 | $\omega_e$ | Erregerfrequenz | rad/s |
-| $\omega_0$ | Resonanzfrequenz | rad/s |
-| $\omega_R$ | | rad/s |
-| $\xi$ | Phasenverschiebung | |
-| $\delta$ | Dämpfungskoeffizient |  |
+| $\omega_0$ | Eigenfrequenz? | rad/s |
+| $\omega_R$ | Resonanzfrequenz | rad/s |
+| $\xi$ | Phasenverschiebung | rad |
+| $\delta$ | Dämpfungskoeffizient | Ns/kgm |
 
 # Theorie erzwungener harmonischer Schwingung
 
@@ -260,4 +260,13 @@ $$\begin{align*}
 * Für $\varphi_{10} = -\varphi_{20}$
   * $\varphi_1(t) = \varphi_{10}\cos(\omega_b t)$
   * $\varphi_2(t) = -\varphi_{10}\cos(\omega_b t)$
-* Für sonst werden beide Normalschwingungen angeregt. Beispiel 
+* Für sonst werden beide Normalschwingungen angeregt.
+  Beispiel: für $\varphi_{10} \neq 0$ und $\varphi_{2}=0$
+* **(1.30a)**
+$$\varphi_1(t)=\frac{1}{2}[cos(w_at)+cos(w_bt)]$$
+$$=\varphi_{10}[cos(\frac{w_b-w_a}{2}t)cos(\frac{w_b+w_a}{2}t)]$$
+$$=\varphi_{10}[cos(\frac{\Delta{w}}{2}t)cos(\bar{w}t)]$$
+* **(1.30b)**
+$$\varphi_2(t)=\frac{1}{2}\varphi_{10}[cos(w_at)-cos(w_bt)]$$
+$$=\varphi_{10}[sin(\frac{\Delta{w}}{2}t)sin(\bar{w}t)]$$
+### Spezialfall - Zusatzmasse an Rad 1 
