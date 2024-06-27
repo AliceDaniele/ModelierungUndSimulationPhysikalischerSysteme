@@ -270,3 +270,4 @@ $$=\varphi_{10}[cos(\frac{\Delta{w}}{2}t)cos(\bar{w}t)]$$
 $$\varphi_2(t)=\frac{1}{2}\varphi_{10}[cos(w_at)-cos(w_bt)]$$
 $$=\varphi_{10}[sin(\frac{\Delta{w}}{2}t)sin(\bar{w}t)]$$
 ### Spezialfall - Zusatzmasse an Rad 1 
+$$\ddot{\varphi}_1 + \frac{b^\ast}{J}\dot{\varphi}_1+\frac{D^\ast}{J}(\varphi_1-\varphi_2) - \frac{mgr_z+sin(\varphi_1)}{J}= 0$$
